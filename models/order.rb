@@ -1,11 +1,10 @@
-require_relative "product"
-
-class Order < Product
+class Order
   attr_reader :order_status
   attr_accessor :total_products
 
   def initialize
     @total_products = 0
+    @order_status = "incomplete"
   end
 
   def add_to_cart
@@ -18,6 +17,10 @@ class Order < Product
     else
       @discount = 0
     end
+  end
+
+  def check_out
+    @order_status = "complete"
   end
 
 end
