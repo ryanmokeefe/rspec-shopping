@@ -1,10 +1,10 @@
 class Order
-  attr_reader :order_status
+  attr_reader :status
   attr_accessor :total_products
 
   def initialize
     @total_products = 0
-    @order_status = "incomplete"
+    @status = "incomplete"
   end
 
   def add_to_cart
@@ -20,7 +20,7 @@ class Order
   end
 
   def check_out
-    @order_status = "complete"
+    @status = "complete"
   end
 
 end
