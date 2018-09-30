@@ -7,6 +7,7 @@ class Product
     @title = title
     @cost = cost
     @reviews = []
+    @reliability = ""
   end
 
   def read_product_info
